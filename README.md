@@ -8,23 +8,23 @@ Autor: **Antonio Rodríguez Iglesias** · Profesor: Pablo García Rodríguez
 
 ## La historia
 
-Inspirada en mi Erasmus en Bolonia (2024-2025):
+Inspirada en mi Erasmus en Bolonia (2023-2024):
 
 1. **Llegada:** Antonio llega de Erasmus y aparece en la Piazza Maggiore.
-2. **La plaza:** pasea entre la gente, las terrazas, los coches y el autobús.
+2. **La plaza:** pasea entre la gente, las terrazas y los coches.
 3. **La subida:** sigue los pórticos hasta el Santuario de San Luca, en la colina.
 
 ## Qué hay en la escena
 
-- **Ciudad real:** el centro de Bolonia con Google Photorealistic 3D Tiles a través de Cesium. Solo se carga un trozo de la ciudad (Cesium Polygon Raster Overlay).
-- **Terreno:** un Terrain de Unity de 3000 × 2550 m con colinas y unos 270 árboles pintados con Paint Trees. Hay 5 tipos de árbol, todos prefabs con LOD Group.
+- **Ciudad real:** el centro de Bolonia con Google Photorealistic 3D Tiles a través de Cesium. El CesiumGeoreference está en el centro de Bolonia y solo se carga un trozo de la ciudad (Cesium Polygon Raster Overlay).
+- **Terreno:** un Terrain de Unity con colinas y árboles pintados con Paint Trees. Hay 5 tipos de árbol, todos prefabs con LOD Group.
 - **Pórticos de San Luca:** 50 tramos hechos a partir de un único prefab (`Mi_Tramo`) que suben hasta el santuario.
-- **Personaje:** Remy de Mixamo con el Third Person Controller de Starter Assets. Puede andar, correr y saltar.
+- **Personaje:** Remy de Mixamo (rig Humanoid) con el Third Person Controller de Starter Assets. Puede andar, correr y saltar.
 - **Cámaras:** Cinemachine en tercera persona. Con la tecla **V** se cambia a primera persona.
 - **Animaciones:** el Animator Controller `Jugador_Animaciones`:
   - un Blend Tree que pasa de Idle a Walk y a Run según `Speed`;
   - el salto con JumpStart, InAir y JumpLand.
-- **Gente y tráfico:** personajes de Mixamo paseando por la plaza, coches de Kenney y un autobús hecho con formas básicas.
+- **Gente y tráfico:** 3 personajes de Mixamo paseando por la plaza (`Paseante.cs`), siempre pegados al suelo (`AjustarAlSuelo.cs`), y coches de Kenney.
 
 ![Remy en la Piazza Maggiore](Capturas_Presentacion/remy_frente.jpg)
 
@@ -68,12 +68,13 @@ Están en `Assets/_MisCosas/Scripts`:
 - **La gente salía hundida en el suelo.** Lo arreglé con el script `AjustarAlSuelo`.
 - **Remy era gigante al importarlo.** Lo arreglé con la escala 0,44, y ahora mide 1,81 m.
 - **Cesium tardaba mucho en cargar al pulsar Play.** Puse Maximum Screen Space Error a 16 y desactivé la recarga de dominio al entrar en Play.
-- **La cámara se quedaba pegada al personaje.** Lo arreglé con Vertical Arm Length a 0,3 y poniendo el tag Player al Jugador.
+- **La cámara se quedaba pegada al personaje.** Lo arreglé poniendo el Vertical Arm Length de la cámara a 0,3.
 
 ## Recursos de terceros (todos gratuitos)
 
 - [Cesium for Unity](https://cesium.com/platform/cesium-for-unity/) y Google Photorealistic 3D Tiles (Cesium ion).
-- [Starter Assets – Third Person](https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526) de Unity Technologies.
+- Starter Assets – Third Person Character Controller, de Unity Technologies (Asset Store).
 - Personajes y animaciones de [Mixamo](https://www.mixamo.com) (Adobe).
 - [Car Kit de Kenney](https://kenney.nl/assets/car-kit) (licencia CC0).
+- Bancos, farolas, jardineras y mesas de terraza de [Poly Haven](https://polyhaven.com) (licencia CC0).
 - Texturas de hierba y roca de [ambientCG](https://ambientcg.com) (licencia CC0).
