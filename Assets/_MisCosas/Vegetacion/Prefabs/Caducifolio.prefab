@@ -192,6 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1869558830618911398}
   - component: {fileID: 8273318455880919348}
+  - component: {fileID: 5266278929872466466}
   m_Layer: 0
   m_Name: Caducifolio
   m_TagString: Untagged
@@ -239,3 +240,26 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4591792716774115248}
   m_Enabled: 1
+--- !u!136 &5266278929872466466
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4731676436686161238}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
